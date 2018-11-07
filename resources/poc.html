@@ -1,0 +1,28 @@
+<html>
+<head><title>Test</title></head>
+<body>
+
+	English
+	<div id="english"></div>
+	German
+	<div id="german"></div>
+
+	<script>
+		console.log('callFunc(en)')
+		var en = callFunc('en');
+		console.log('en json received');
+		var enResult = JSON.parse(en);
+		console.log('en json parsed')
+		document.getElementById('english').innerHTML = "Success: " + enResult.Reset;
+		console.log('html updated')
+	
+		console.log('callFunc(de)');
+		var de = callFunc('de');
+		console.log('de json received');
+		var deResult = JSON.parse(de);
+		console.log('de json parsed');
+		document.getElementById('german').innerHTML = "Success: " + deResult.Reset;
+		console.log('html updated');
+	</script>
+</body>
+</html>

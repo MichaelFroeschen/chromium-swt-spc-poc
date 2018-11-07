@@ -1,0 +1,13 @@
+Manifest-Version: 1.0
+Bundle-ManifestVersion: 2
+Bundle-Name: Chromium-poc
+Bundle-SymbolicName: chromium-poc;singleton:=true
+Bundle-Version: 1.0.0.qualifier
+Require-Bundle: org.eclipse.core.runtime,
+ org.eclipse.ui,
+ org.eclipse.equinox.ds,
+ org.eclipse.equinox.util,
+ org.eclipse.equinox.event,
+ org.eclipse.swt.chromium;bundle-version="0.6.0"
+Automatic-Module-Name: chromium-poc
+Bundle-RequiredExecutionEnvironment: JavaSE-10
