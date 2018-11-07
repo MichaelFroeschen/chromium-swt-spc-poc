@@ -10,4 +10,4 @@ Require-Bundle: org.eclipse.core.runtime,
  org.eclipse.equinox.event,
  org.eclipse.swt.chromium;bundle-version="0.6.0"
 Automatic-Module-Name: chromium-poc
-Bundle-RequiredExecutionEnvironment: JavaSE-10
+Bundle-RequiredExecutionEnvironment: JavaSE-1.8
