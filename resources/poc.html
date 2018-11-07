@@ -23,6 +23,25 @@
 		console.log('de json parsed');
 		document.getElementById('german').innerHTML = "Success: " + deResult.Reset;
 		console.log('html updated');
+		
+		// functions needed for demonstration of issue 31
+		function doSomething() {
+			console.log('Doin something');
+			var tmp = 0;
+			for (var i = 0; i < 10000; i++) {
+				tmp = tmp + 1 * 2;
+			}
+			console.log('Finished something');
+			finishedSomething();
+		}
+		function doSomething1() {
+			console.log('Doin something');
+			var tmp = 0;
+			for (var i = 0; i < 10000; i++) {
+				tmp = tmp + 1 * 2;
+			}
+			console.log('Finished something');
+		}
 	</script>
 </body>
 </html>

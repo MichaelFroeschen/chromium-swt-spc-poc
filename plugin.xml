@@ -22,18 +22,24 @@
    <extension
          point="org.eclipse.ui.views">
       <view
-            class="chromiumpoc.View"
-            name="View"
-            id="chromium-poc.view"
+            class="chromiumpoc.View30"
+            name="View30"
+            id="chromium-poc.view30"
             inject="true">
       </view>
+      <view
+            class="chromiumpoc.View31"
+            id="chromium-poc.view31"
+            name="View31"
+            restorable="true">
+      </view>
    </extension>
-   <extension
+      <extension
          point="org.eclipse.ui.perspectiveExtensions">
       <perspectiveExtension
             targetID="*">
          <view
-               id="chromium-poc.view"
+               id="chromium-poc.view30"
                minimized="false"
                relationship="left"
                standalone="true"
@@ -52,7 +58,47 @@
                   label="Exit">
             </command>
          </menu>
+         <menu
+               label="Views">
+            <command
+                  commandId="chromium-poc.openView"
+                  label="Open Issue 30 Example"
+                  style="push">
+               <parameter
+                     name="viewId"
+                     value="chromium-poc.view30">
+               </parameter>
+            </command>
+            <command
+                  commandId="chromium-poc.openView"
+                  label="Open Issue 31 Example"
+                  style="push">
+               <parameter
+                     name="viewId"
+                     value="chromium-poc.view31">
+               </parameter>
+            </command>
+         </menu>
       </menuContribution>
+   </extension>
+   <extension
+         point="org.eclipse.ui.commands">
+      <command
+            id="chromium-poc.openView"
+            name="Open View">
+         <commandParameter
+               id="viewId"
+               name="viewId"
+               optional="true">
+         </commandParameter>
+      </command>
+   </extension>
+   <extension
+         point="org.eclipse.ui.handlers">
+      <handler
+            class="chromiumpoc.OpenViewHandler"
+            commandId="chromium-poc.openView">
+      </handler>
    </extension>
 
 </plugin>

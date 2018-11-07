@@ -18,8 +18,8 @@ import org.eclipse.ui.IWorkbench;
 import org.eclipse.ui.part.ViewPart;
 import org.osgi.framework.Bundle;
 
-public class View extends ViewPart {
-	public static final String ID = "chromium-poc.view";
+public class View30 extends ViewPart {
+	public static final String ID = "chromium-poc.view30";
 
 	@Inject IWorkbench workbench;
 
