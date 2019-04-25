@@ -54,8 +54,13 @@ public class View58 extends ViewPart {
 		new BrowserFunction(browser, "callString") {
 			@Override
 			public Object function(Object[] arguments) {
-				return new String[] { "{\"key\"=\"val\", \"key1\"=\"val1\"}",
-						"{\"key2\"=\"val2\", \"key3\"=\"val3\"}" };
+				return new String[] { "a,b", "a", "a=b" };
+			}
+		};
+		new BrowserFunction(browser, "callObject") {
+			@Override
+			public Object function(Object[] arguments) {
+				return "{\"key\"=\"val\", \"key1\"=\"val1\"}";
 			}
 		};
 		Bundle bundle = Platform.getBundle("chromium-poc");
