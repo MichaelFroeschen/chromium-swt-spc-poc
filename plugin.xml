@@ -33,6 +33,12 @@
             name="View31"
             restorable="true">
       </view>
+      <view
+            class="chromiumpoc.View58"
+            id="chromium-poc.view58"
+            name="View58"
+            restorable="true">
+      </view>
    </extension>
       <extension
          point="org.eclipse.ui.perspectiveExtensions">
@@ -76,6 +82,15 @@
                <parameter
                      name="viewId"
                      value="chromium-poc.view31">
+               </parameter>
+            </command>
+            <command
+                  commandId="chromium-poc.openView"
+                  label="Open Issue 58 Example"
+                  style="push">
+               <parameter
+                     name="viewId"
+                     value="chromium-poc.view58">
                </parameter>
             </command>
          </menu>
