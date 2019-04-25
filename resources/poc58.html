@@ -1,12 +1,50 @@
 <html>
-<head><title>Test</title></head>
+<head><title>Test</title>
+<style>button { width: 100%; }</style>
+</head>
 <body>
-	<button onclick="doCallFunc()">Click me to demonstrate</button>
+	<button onclick="doCallInt()">Should return [0]</button>
+	<button onclick="doCallEmpty()">Should return empty int array</button>
+	<button onclick="doCallBoolean()">Should return [true]</button>
+	<button onclick="doCallString()">Should return ["String"]</button>	
+	<button onclick="doCall()">Should return 0</button>
+	
+	Return:
+	<div id="returnVal"></div>
 	<script>
-	function doCallFunc(){
-		console.log('callFunc()')
-		var result = callFunc();
+	function doCallInt(){
+		console.log('callInt()')
+		var result = callInt();
 		console.log(result);		
+		console.log(Array.isArray(result));
+		document.getElementById('returnVal').innerHTML = result;
+	}
+	function doCallEmpty(){
+		console.log('callEmpty()')
+		var result = callEmpty();
+		console.log(result);
+		console.log(Array.isArray(result));
+		document.getElementById('returnVal').innerHTML = result;
+	}
+	function doCallBoolean(){
+		console.log('callBoolean()')
+		var result = callBoolean();
+		console.log(result);
+		console.log(Array.isArray(result));
+		document.getElementById('returnVal').innerHTML = result;
+	}
+	function doCallString(){
+		console.log('callString()')
+		var result = callString();
+		console.log(result);		
+		console.log(Array.isArray(result));
+		document.getElementById('returnVal').innerHTML = result;
+	}
+	function doCall(){
+		console.log('call()')
+		var result = call();
+		console.log(result);		
+		document.getElementById('returnVal').innerHTML = result;
 	}
 	</script>
 </body>

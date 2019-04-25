@@ -27,13 +27,36 @@ public class View58 extends ViewPart {
 	public void createPartControl(Composite parent) {
 		parent.setLayout(new FillLayout());
 		Browser browser = new Browser(parent, SWT.NONE);
-		new BrowserFunction(browser, "callFunc") {
+		new BrowserFunction(browser, "call") {
 			@Override
 			public Object function(Object[] arguments) {
-				return new String[] {};
+				return 0;
+			};
+		};
+		new BrowserFunction(browser, "callInt") {
+			@Override
+			public Object function(Object[] arguments) {
+				return new int[] { 0 };
 			}
 		};
-
+		new BrowserFunction(browser, "callEmpty") {
+			@Override
+			public Object function(Object[] arguments) {
+				return new int[] {};
+			}
+		};
+		new BrowserFunction(browser, "callBoolean") {
+			@Override
+			public Object function(Object[] arguments) {
+				return new boolean[] { true };
+			}
+		};
+		new BrowserFunction(browser, "callString") {
+			@Override
+			public Object function(Object[] arguments) {
+				return new String[] { "String", "String1" };
+			}
+		};
 		Bundle bundle = Platform.getBundle("chromium-poc");
 		URL url = FileLocator.find(bundle, Path.fromPortableString("resources/poc58.html"), null);
 		try {
