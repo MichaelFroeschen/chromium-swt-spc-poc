@@ -1,0 +1,22 @@
+<html>
+<head><title>Test</title>
+<style>button { width: 100%; }</style>
+</head>
+<body>
+	<div id="output"></div>
+	<script>
+	function longRunning(){
+		var start = Date.now();
+		for (var i = 0; i < 20000; i++) {
+			var x = i+i;
+		}
+		document.getElementById('output').innerHTML = "First loop needed " + (Date.now() - start) + "ms";
+		for (var i = 0; i < 20000; i++) {			
+			console.log(i);
+		}
+		document.getElementById('output').innerHTML += "<br>Second loop needed " + (Date.now() - start) + "ms";
+		return "finished";
+	}
+	</script>
+</body>
+</html>
